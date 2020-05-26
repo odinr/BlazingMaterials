@@ -12,39 +12,14 @@
       <File FileName="BlazingMaterials/wwwroot/vendors~mwc-button.js" Line="238" Column="66" />
       <File FileName="BlazingMaterials/wwwroot/index.js" Line="849" Column="1273" />
       <File FileName="BlazingMaterials/HtmlElements/src/index.ts" Line="5" Column="40" />
-      <File FileName="BlazingMaterials/wwwroot/vendors~mwc-drawer.js" Line="50" Column="37" />
       <File FileName="BlazingMaterials/wwwroot/mwc-ripple.js" Line="1" Column="1" />
       <File FileName="BlazingMaterials/HtmlElements/tsconfig.json" Line="1" Column="1" />
-      <File FileName="BlazingMaterials/HtmlElements/package.json" Line="1" Column="1" />
+      <File FileName="BlazingMaterials/HtmlElements/package.json" Line="30" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="BlazingMaterial" expanded="True">
-            <Node name="BlazingMaterials" expanded="True">
-              <Node name="Components" expanded="True">
-                <Node name="MwcAppBar" expanded="True" />
-                <Node name="MwcButton" expanded="True" />
-                <Node name="MwcDrawer" expanded="True" />
-                <Node name="MwcGrid" expanded="True" />
-                <Node name="MwcIconButton" expanded="True" />
-                <Node name="MwcRipple" expanded="True" />
-              </Node>
-              <Node name="HtmlElements" expanded="True">
-                <Node name="src" expanded="True" />
-                <Node name="package.json" selected="True" />
-              </Node>
-              <Node name="wwwroot" expanded="True" />
-            </Node>
-            <Node name="BlazingMaterials.Demo" expanded="True">
-              <Node name="Pages" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Shared" expanded="True" />
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="BlazingMaterial" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>

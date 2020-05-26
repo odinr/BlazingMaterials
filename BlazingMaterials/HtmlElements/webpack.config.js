@@ -7,7 +7,7 @@ module.exports = {
     library: ["BlazingMaterials"],
     libraryTarget: 'window',
     filename: "index.js",
-    path: path.resolve(__dirname, "..", "wwwroot"),
+    path: path.resolve(__dirname, "..", "wwwroot/scripts"),
     chunkFilename: "[name].js",
     publicPath: "/_content/BlazingMaterials/"
   },
