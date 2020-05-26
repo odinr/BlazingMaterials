@@ -1,0 +1,17 @@
+@namespace BlazingMaterials.Components
+
+<mwc-ripple primary="@Primary" accent="@Accent" disabled>
+    @ChildContent
+</mwc-ripple>
+
+@code {
+    
+    [Parameter]
+    public bool Primary { get; set; }
+
+    [Parameter]
+    public bool Accent { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingMaterials", "BlazingMaterials\BlazingMaterials.csproj", "{367912AC-1797-4FC7-BCDC-FB1EC7CE428C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingMaterials.Demo", "BlazingMaterials.Demo\BlazingMaterials.Demo.csproj", "{743EFEB6-D618-4A22-BAD1-19A52F4E549C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{367912AC-1797-4FC7-BCDC-FB1EC7CE428C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{367912AC-1797-4FC7-BCDC-FB1EC7CE428C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{367912AC-1797-4FC7-BCDC-FB1EC7CE428C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{367912AC-1797-4FC7-BCDC-FB1EC7CE428C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{743EFEB6-D618-4A22-BAD1-19A52F4E549C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{743EFEB6-D618-4A22-BAD1-19A52F4E549C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{743EFEB6-D618-4A22-BAD1-19A52F4E549C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{743EFEB6-D618-4A22-BAD1-19A52F4E549C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

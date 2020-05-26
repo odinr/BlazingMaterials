@@ -1,0 +1,40 @@
+@namespace BlazingMaterials.Components
+
+<mwc-drawer @ref="Ref" hasHeader="@ShowHeader" type="@DrawerType" open="@State.Open">
+    <span slot="title">@Title</span>
+    <span slot="subtitle">@SubTitle</span>
+    <CascadingValue Value="@Manager">
+        @NavLinks
+        <div slot="appContent">@ChildContent</div>
+    </CascadingValue>
+</mwc-drawer>
+
+@code {
+
+    [Parameter]
+    public MwcDrawerType Type { get; set; }
+
+    [Parameter]
+    public bool ShowHeader { get; set; } = true;
+
+    [Parameter]
+    public bool Open { get { return Manager.Open; } set { Manager.Open = value; } }
+
+    [Parameter]
+    public RenderFragment Title { get; set; }
+
+    [Parameter]
+    public RenderFragment SubTitle { get; set; }
+
+    [Parameter]
+    public RenderFragment NavLinks { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+
+    protected string DrawerType
+    {
+        get { return Enum.GetName(typeof(MwcDrawerType), Type).ToLower(); }
+    }
+}

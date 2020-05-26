@@ -1,0 +1,20 @@
+﻿<MwcAppBar Title="@typeof(Program).Namespace" Fixed="true">
+    <NavigationIcon>
+        <MwcIconButton Icon="menu" OnClickCallback="ToggleDrawer"></MwcIconButton>
+    </NavigationIcon>
+    <ChildContent>@ChildContent</ChildContent>
+</MwcAppBar>
+
+@code {
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [CascadingParameter]
+    protected MwcDrawerState.Manager DrawerState { get; set; }
+
+    public void ToggleDrawer(MouseEventArgs e)
+    {
+        DrawerState.Open = !DrawerState.Open;
+    }
+}

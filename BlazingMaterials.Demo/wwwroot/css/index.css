@@ -1,0 +1,14 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Material+Icons&display=block');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --mdc-theme-primary: cornflowerblue;
+    --mdc-typography-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --mdc-drawer-width: 500px;
+    /** Setup **/
+    font-family: var(--mdc-typography-font-family, Roboto, sans-serif);
+}

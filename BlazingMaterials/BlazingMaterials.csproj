@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RazorLangVersion>3.0</RazorLangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="**\*.razor">
+      <Pack>false</Pack>
+    </Content>
+    <Content Update="Components\MwcAppBar\MwcButton.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Components\MwcAppBar\MwcAppBar.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Components\MwcIconButton\MwcButton.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Components\MwcGrid\MwcGrid %28copy%29.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Components\MwcIconButton\MwcIconButton.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+    <Content Update="Components\MwcGrid\MwcGrid.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Components\MwcAppBar\" />
+    <Folder Include="Components\MwcIconButton\" />
+    <Folder Include="Components\MwcGrid\" />
+  </ItemGroup>
+</Project>

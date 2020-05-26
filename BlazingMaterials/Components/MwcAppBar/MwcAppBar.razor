@@ -1,0 +1,54 @@
+@namespace BlazingMaterials.Components
+
+@if (Fixed)
+{
+    <mwc-top-app-bar-fixed centerTitle="@CenterTitle" prominent="@Prominent" dense="@Dense">
+        <span slot="navigationIcon">@NavigationIcon</span>
+        <span slot="title">@Title</span>
+        <span slot="actionItems">@ButtonContent</span>
+        @ChildContent
+    </mwc-top-app-bar-fixed>
+}
+else
+{
+<mwc-top-app-bar centerTitle="@CenterTitle" prominent="@Prominent" dense="@Dense">
+    <span slot="navigationIcon">@NavigationIcon</span>
+    <div slot="title">@Title</div>
+    <div slot="actionItems">@ButtonContent</div>
+    @ChildContent
+</mwc-top-app-bar>
+}
+
+@code {
+    [Parameter]
+    public bool Fixed { get; set; }
+
+    [Parameter]
+    public string Title { get; set; } = "";
+
+    [Parameter]
+    public bool CenterTitle { get; set; }
+
+    [Parameter]
+    public bool Prominent { get; set; }
+
+    [Parameter]
+    public bool Dense { get; set; }
+
+    [Parameter]
+    public RenderFragment NavigationIcon { get; set; }
+
+    [Parameter]
+    public RenderFragment ButtonContent { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [CascadingParameter]
+    protected MwcDrawerState.Manager DrawerState { get; set; }
+
+    public void ToggleDrawer(MouseEventArgs e)
+    {
+        DrawerState.Open = !DrawerState.Open;
+    }
+}

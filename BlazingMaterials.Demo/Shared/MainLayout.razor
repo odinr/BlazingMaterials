@@ -1,0 +1,45 @@
+﻿@inherits LayoutComponentBase
+
+<style>
+    #navlinks {
+        display: flex;
+        flex-flow: column;
+    }
+    #navlinks a{
+        text-decoration: none;
+    }
+
+        #navlinks a.active {
+            --mdc-theme-primary: #e9437a;
+            --mdc-theme-on-primary: white;
+        }
+
+</style>
+
+<MwcDrawer Type="@MwcDrawerType.Modal">
+    <Title>Title</Title>
+    <SubTitle>SubTitle</SubTitle>
+    <NavLinks>
+        <div id="navlinks">
+            <NavLink href="" Match="NavLinkMatch.All">
+                <MwcButton Label="Home" Icon="home"></MwcButton>
+            </NavLink>
+            <NavLink href="button">
+                <MwcButton Label="Button"></MwcButton>
+            </NavLink>
+            <NavLink href="drawer">
+                <MwcButton Label="Drawer"></MwcButton>
+            </NavLink>
+            <NavLink href="ripple">
+                <MwcButton Label="Ripple"></MwcButton>
+            </NavLink>
+        </div>
+    </NavLinks>
+    <ChildContent>
+        <AppHeader>@Body</AppHeader>
+    </ChildContent>
+</MwcDrawer>
+
+@code {
+
+}
