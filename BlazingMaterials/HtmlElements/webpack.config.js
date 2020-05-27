@@ -7,7 +7,7 @@ module.exports = {
     library: ["BlazingMaterials"],
     libraryTarget: 'window',
     filename: "index.js",
-    path: path.resolve(__dirname, "..", "wwwroot/scripts"),
+    path: path.resolve(__dirname, "..", "wwwroot"),
     chunkFilename: "[name].js",
     publicPath: "/_content/BlazingMaterials/"
   },
@@ -27,10 +27,6 @@ module.exports = {
         ],
         exclude: /node_modules/
       },
-      // {
-      //   test: require.resolve("./src/shims.js"),
-      //   use: "exports-loader?file,BlazingMaterial=>BlazingMaterial"
-      // }
     ]
   },
   resolve: {

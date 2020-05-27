@@ -3,6 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
+    <HtmlElementsRoot>HtmlElements/</HtmlElementsRoot>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <DocumentationFile></DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.4" />
@@ -13,29 +18,19 @@
     <Content Update="**\*.razor">
       <Pack>false</Pack>
     </Content>
-    <Content Update="Components\MwcAppBar\MwcButton.razor">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-    </Content>
-    <Content Update="Components\MwcAppBar\MwcAppBar.razor">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-    </Content>
-    <Content Update="Components\MwcIconButton\MwcButton.razor">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-    </Content>
-    <Content Update="Components\MwcGrid\MwcGrid %28copy%29.razor">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-    </Content>
-    <Content Update="Components\MwcIconButton\MwcIconButton.razor">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-    </Content>
-    <Content Update="Components\MwcGrid\MwcGrid.razor">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-    </Content>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Components\MwcAppBar\" />
-    <Folder Include="Components\MwcIconButton\" />
-    <Folder Include="Components\MwcGrid\" />
-  </ItemGroup>
+  <Target Name="DebugEnsureNodeEnv" Condition="'$(Configuration)' == 'Debug' And !Exists('$(HtmlElementsRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(HtmlElementsRoot)" Command="npm install" />
+  </Target>
+  <!-- <Target Name="CompileJavascriptFiles" BeforeTargets="Build" DependsOnTargets="DebugEnsureNodeEnv">
+    <RemoveDir Directories="$(HtmlElementsRoot)/dist/" />
+    <Exec WorkingDirectory="$(HtmlElementsRoot)" Command="npm run build" />
+  </Target> -->
 </Project>
