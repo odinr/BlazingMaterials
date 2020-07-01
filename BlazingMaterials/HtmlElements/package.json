@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "@material/mwc-button": "^0.15.0",
-    "@material/mwc-drawer": "^0.16.0-canary.17d33745.0",
+    "@material/mwc-drawer": "^0.16.1",
     "@material/mwc-icon-button": "^0.15.0",
     "@material/mwc-ripple": "^0.15.0",
     "@material/mwc-top-app-bar": "^0.15.0",
