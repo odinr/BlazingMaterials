@@ -15,7 +15,7 @@
     "@material/mwc-ripple": "^0.15.0",
     "@material/mwc-top-app-bar": "^0.15.0",
     "@types/node": "^14.0.5",
-    "ts-loader": "^7.0.5",
+    "ts-loader": "^9.1.0",
     "typescript": "^3.9.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
